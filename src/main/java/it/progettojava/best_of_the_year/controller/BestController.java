@@ -75,28 +75,28 @@ public class BestController {
 
     @GetMapping("/movies/{id}")
     public String showMovieById(@PathVariable int id, Model movieIdModel) {
-    Movie movie = getBestMovies().stream()
-            .filter(m -> m.getId() == id)
-            .findFirst()
-            .orElse(null);
-    String titolo = (movie != null) ? movie.getTitolo() : "This movie not exist";
+        Movie movie = getBestMovies().stream()
+                .filter(m -> m.getId() == id)
+                .findFirst()
+                .orElse(null);
+        String titolo = (movie != null) ? movie.getTitolo() : "This movie not exist";
 
-    movieIdModel.addAttribute("titolo", titolo);
+        movieIdModel.addAttribute("titolo", titolo);
 
-    return "moviebyid";
-}
+        return "moviebyid";
+    }
 
     @GetMapping("/songs/{id}")
     public String showSongById(@PathVariable int id, Model songIdModel) {
-    Song song = getBestSongs().stream()
-            .filter(s -> s.getId() == id)
-            .findFirst()
-            .orElse(null);
-    String titolo = (song != null) ? song.getTitolo() : "This song not exist";
+        Song song = getBestSongs().stream()
+                .filter(s -> s.getId() == id)
+                .findFirst()
+                .orElse(null);
+        String titolo = (song != null) ? song.getTitolo() : "This song not exist";
 
-    songIdModel.addAttribute("titolo", titolo);
+        songIdModel.addAttribute("titolo", titolo);
 
-    return "songbyid";
-}
+        return "songbyid";
+    }
 }
 
