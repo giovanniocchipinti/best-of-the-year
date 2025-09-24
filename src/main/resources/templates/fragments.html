@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- NAVBAR FRAGMENT -->
+
+<nav th:fragment = "navbar" class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+  <a class="navbar-brand">Best of</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Movies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" hreff="#">Songs</a>
+      </li>
+    </ul>
+  </div>  
+</nav>
+
+<!-- CARD FRAGMENT -->
+
+<div th:fragment= "card" class="card container t-center justify-content-center d-flex" style="width: 18rem;">
+  <img th:src="@{/img/logo.jpg}" class="card-img-top" alt="Immagine">
+  <div class="card-body">
+    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora architecto delectus placeat officiis porro alias corrupti ad esse atque sit nihil quasi ratione ipsa reprehenderit natus, aliquid quis ducimus necessitatibus.</p>
+  </div>
+</div>
+
+</body>
+</html>
